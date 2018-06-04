@@ -1,0 +1,290 @@
+/*
+
+*/
+.video {
+  width: 100%;
+  background-color: black;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  /*9:16*/
+  height: 0;
+}
+.video .video-big-play-button-wrapper, .video .video-background, .video .video-intro, .video .video-player, .video .video-button-sign-in-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+.video .video-player {
+  display: none;
+}
+.video .video-button-sign-in-wrapper {
+  background-color: black;
+}
+.video .video-big-play-button-wrapper {
+  z-index: 1;
+  cursor: pointer;
+}
+.video .video-big-play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.video .video-button-sign-in {
+  top: 50%;
+  position: absolute;
+  margin-top: -19.7px;
+  width: 100%;
+  display: none;
+}
+.video .video-loading {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: none;
+}
+.video .video-intro {
+  display: none;
+}
+.video .video-background {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.video .video-gradient-top, .video .video-gradient-bottom {
+  height: 98px;
+  width: 100%;
+  position: absolute;
+  background-repeat: repeat-x;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+  -moz-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  pointer-events: none;
+}
+.video .video-gradient-top {
+  top: 0;
+  z-index: 23;
+  background-position: top;
+}
+.video .video-gradient-bottom {
+  bottom: 0;
+  z-index: 22;
+  background-position: bottom;
+}
+.video .video-control-panel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 24;
+  text-align: left;
+}
+.video .video-control-panel .btn-icon {
+  background-color: transparent;
+}
+.video .video-progress-wrapper {
+  height: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  position: relative;
+  cursor: pointer;
+}
+.video .video-progress-wrapper:hover .video-play-progress-handle {
+  display: block;
+}
+.video .video-progress {
+  margin-left: 6px;
+  margin-right: 6px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.video .video-load-progress {
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.video .video-play-progress {
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+}
+.video .video-play-progress-handle {
+  height: 12px;
+  top: 0;
+  margin-top: -4px;
+  margin-left: -6px;
+  width: 12px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  background-color: red;
+  display: none;
+}
+.video .video-volume-control {
+  display: inline-block;
+}
+.video .video-volume-panel {
+  display: inline-block;
+  width: 66px;
+  height: 12px;
+  position: relative;
+  top: 3px;
+}
+.video .video-volume-background {
+  height: 4px;
+  width: 54px;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  top: 4px;
+  position: relative;
+  left: 6px;
+}
+.video .video-volume-slider {
+  width: 75%;
+  height: 4px;
+  background-color: white;
+}
+.video .video-volume-slider-handle {
+  height: 12px;
+  margin-top: -4px;
+  margin-left: -6px;
+  width: 12px;
+  background-color: white;
+  position: absolute;
+  left: 75%;
+  border-radius: 5px;
+}
+.video .video-time-panel {
+  display: inline-block;
+  color: white;
+}
+.video .video-current-time {
+  display: inline-block;
+}
+.video .video-time-separator {
+  display: inline-block;
+}
+.video .video-time-duration {
+  display: inline-block;
+}
+.video .video-quality-button {
+  display: inline-block;
+}
+.video .video-quality-button button {
+  background-color: transparent;
+  color: white;
+}
+
+.modal-vertical-alignment {
+  display: table;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  /* This makes sure that we can still click outside of the modal to close it */
+}
+
+.modal-vertical-alignment .modal-vertical-align-center {
+  /* To center vertically */
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.modal-vertical-alignment .modal-content {
+  /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+  width: inherit;
+  height: inherit;
+  /* To center horizontally */
+  margin: 0 auto;
+  pointer-events: all;
+}
+
+@media (min-width: 992px) {
+  .video-modal .modal-dialog {
+    width: 800px;
+    max-width: none;
+  }
+}
+@media (min-width: 992px) {
+  .video-modal .dont-have-account {
+    margin-top: 1.9rem;
+  }
+}
+.video-modal .btn-sign-up {
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: color 0 ease-in;
+  transition: none;
+}
+.video-modal .tag-pill {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+.video-modal .separator {
+  position: relative;
+  border-bottom: 3px double #ddd;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.video-modal .separator .separator-text {
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
+  left: 50%;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .video-modal .separator {
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    bottom: 20%;
+    border-right: 3px double #ddd;
+    margin: auto;
+  }
+}
+.video-modal .form-control-feedback {
+  margin-top: 0;
+}
+.video-modal .form-control-feedback small {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  display: block;
+}
+.video-modal .login-message small.tagged {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+.video-modal .modal-content {
+  position: relative;
+}
+
+/*# sourceMappingURL= */
